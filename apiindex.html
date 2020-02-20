@@ -60,17 +60,17 @@
 
                 <!-------------------------------- confirmar senha ------------------------------------>
                 <div class="p-2">
-                    <label for="confmarSenhaUsuario">Confimar Senha:</label>
-                    <input id="confmarSenhaUsuario" class="form-control" type="password" name="confmarSenhaUsuario"
-                        placeholder="confimar sua senha">
+                    <label for="confirmarSenhaUsuario">Confimar Senha:</label>
+                    <input id="confirmarSenhaUsuario" class="form-control" type="password" 
+                    name="confirmarSenhaUsuario" placeholder="confimar sua senha">
                 </div>
 
                 <!-------------------------------- cpf ------------------------------------>
 
                 <div class="p-2">
                     <label for="cpf">CPF</label>
-                    <input type="text" class="form-control cpf-mask" onkeypress="$(this).mask('000.000.000-00');"
-                        id="cpf" name="cpf" placeholder="CPF">
+                    <input type="text" class="form-control"
+                        id="cpf" name="cpf" maxlength="11" placeholder="CPF">
                 </div>
 
                 <!-------------------------------- telefone ------------------------------------>
@@ -102,7 +102,7 @@
                 <div class="form-group">
                     <div class="p-2">
                         <label for="cepUsuario">Cep:</label>
-                        <input id="cepUsuario" class="form-control" type="number" name="cepUsuario"
+                        <input id="cepUsuario" class="form-control" type="text" name="cepUsuario"
                             placeholder="digitar seu cep">
                     </div>
 
@@ -143,7 +143,7 @@
                         </div>
                         <div class="col-6">
                             <label for="estadoUsuario">Estado:</label>
-                            <select name="estadoUsuario" class="form-control">
+                            <select name="estadoUsuario" class="form-control" id="estadoUsuario">
                                 <option value="" disabled selected>Estado</option>
                                 <option value="SP">SP</option>
                                 <option value="RJ">RJ</option>
@@ -181,7 +181,7 @@
                 <div class="form-group">
                     <div class="p-2">
                         <label for="cartãoUsuario">Numero do Cartão:</label>
-                        <input id="cartãoUsuario" class="form-control" type="number" name="cartãoUsuario"
+                        <input id="cartãoUsuario" class="form-control" type="text" name="cartãoUsuario"
                             placeholder="digitar o seu numero co cartão">
                     </div>
 
@@ -195,7 +195,7 @@
                         </div>
                         <div class="col-4">
                             <label for="cvvUsuario">CVV:</label>
-                            <input id="cvvUsuario" class="form-control" type="number" name="cvvUsuario"
+                            <input id="cvvUsuario" class="form-control" type="text" name="cvvUsuario"
                                 placeholder="CVV">
                             </select>
                         </div>
@@ -205,7 +205,7 @@
                     <div class="p-2">
                         <label for="nomeTitularUsuario">Nome do Titular:</label>
                         <input id="nomeTitularUsuario" class="form-control" type="text" name="nomeTitularUsuario"
-                            placeholder="nome do titular">
+                        placeholder="nome do titular" >
                     </div>
 
                     <!-------------------------------- cpf do titular ------------------------------------>
@@ -217,7 +217,8 @@
 
 
                     <div class="d-flex justify-content-end">
-                        <button class="btn btn-success" type="submit"> Finalizar Compra</button>
+                        <button class="btn btn-success" type="button" data-toggle="modal" 
+                        data-target="#compraFinalizada" > Finalizar Compra</button>
                     </div>
 
                 </div>
@@ -228,11 +229,33 @@
 
     </main>
 
+    <div id="compraFinalizada" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Compra realizada com sucesso </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Uhuul!!!! <br> parabens pela sua compra</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">beleza</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/sript.js"></script>
 </body>
 
 

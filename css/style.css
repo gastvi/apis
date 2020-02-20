@@ -7,3 +7,14 @@ header{
     display: flex;
 justify-content: flex;
 }
+
+.v-success{
+    border-color: green;
+}
+
+.v-error{
+    border-color: red;
+}
+.verror:focus{
+    outline: color;
+}
