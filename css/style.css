@@ -1,0 +1,9 @@
+header{
+    color: red;
+    text-align: center;
+}
+
+.btn-primary{
+    display: flex;
+justify-content: flex;
+}
